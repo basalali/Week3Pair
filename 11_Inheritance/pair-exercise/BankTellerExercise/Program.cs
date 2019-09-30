@@ -6,17 +6,30 @@ namespace BankTellerExercise
     {
         static void Main(string[] args)
         {
+            //BankAccount checkingAccount = new CheckingAccount();
+            //BankAccount savingsAccount = new SavingsAccount();
+
+            //decimal amountToDeposit = 100.00M;
+            //decimal newBalance = checkingAccount.Deposit(amountToDeposit);
+
+            //decimal amountToTransfer = 50.00M;
+            //checkingAccount.Transfer(savingsAccount, amountToTransfer);
+
+            //BankCustomer jayGatsby = new BankCustomer();
+            //jayGatsby.AddAccount(checkingAccount);
+            //jayGatsby.AddAccount(savingsAccount);
+
             BankAccount checkingAccount = new CheckingAccount();
             BankAccount savingsAccount = new SavingsAccount();
 
-            decimal amountToDeposit = 100.00M;
-            decimal newBalance = checkingAccount.Deposit(amountToDeposit);
+            BankCustomer jayGatsby = new BankCustomer();
+            jayGatsby.AddAccount(checkingAccount);
+            jayGatsby.AddAccount(savingsAccount);
 
-            decimal amountToTransfer = 50.00M;
-            checkingAccount.Transfer(savingsAccount, amountToTransfer);
+            Console.WriteLine($"Jay Gatsby has {jayGatsby.Accounts.Length} accounts."); // Jay Gatsby has 2 accounts.
 
-            Console.WriteLine(checkingAccount.Balance);
-            Console.WriteLine(savingsAccount.Balance);
+            //Console.WriteLine(checkingAccount.Balance);
+            //Console.WriteLine(savingsAccount.Balance);
 
             Console.ReadLine();
 
