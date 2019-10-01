@@ -16,13 +16,8 @@ namespace BankTellerExercise
             get { return AccountNumber; }
             set { }
         }
-        public decimal Balance { get; protected set; } = 0;
+        public decimal Balance { get; private set; } = 0;
         // balance begins at 0
-
-
-        //do we need Balance to be literally "private"? 
-        //that's how it is listed in the README, but "protected" seems more appropriate
-        //**** or we can use base. when we call this in CheckingAccount
 
         public decimal Deposit(decimal amountToDeposit)
         {
@@ -35,7 +30,6 @@ namespace BankTellerExercise
             Balance = Balance - amountToWithdraw;
             return Balance;
         }
-
 
         public void Transfer(BankAccount destinationAccount, decimal transferAmount)
         {
