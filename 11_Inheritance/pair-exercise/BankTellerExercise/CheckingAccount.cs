@@ -6,23 +6,26 @@ namespace BankTellerExercise
 {
     class CheckingAccount : BankAccount
     {
+        public decimal checkingBalance = 0;
+
         public override decimal Withdraw(decimal amountToWithdraw)
         {
             if (Balance - amountToWithdraw <= -100 )
             {
-                Balance = Balance;
+               return Balance;
             }
-
-            else if (Balance < 0.00M)
+            else if (Balance - amountToWithdraw < 0.00M)
             {
-                Balance = Balance - 10.00M;
+                /*decimal checkingBalance = */
+                amountToWithdraw = amountToWithdraw + 10.00M;
+                base.Withdraw(amountToWithdraw);
             }
             else
             {
-                Balance = Balance - amountToWithdraw;
+                base.Withdraw(amountToWithdraw);
             }
-
             return Balance;
+            //return checkingBalance;
 
         }
 
