@@ -19,6 +19,27 @@ namespace BankTellerExercise
             }
         }
 
+        
+        decimal totalBalance = 0;
+
+        public bool IsVIP
+        {
+            get
+            {
+                foreach(BankAccount account in accountsList)
+                {
+                    totalBalance = totalBalance + account.Balance;
+                    if (totalBalance >= 25000)
+                    {
+                        return true;
+                    }
+         
+                }
+                return false;
+            }
+
+
+        }
         List<BankAccount> accountsList = new List<BankAccount>();
 
         public void AddAccount(BankAccount newAccount)
