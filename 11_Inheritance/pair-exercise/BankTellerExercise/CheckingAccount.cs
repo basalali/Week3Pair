@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankTellerExercise
 {
-    class CheckingAccount : BankAccount
+    public class CheckingAccount : BankAccount
     {
         public decimal checkingBalance = 0;
 
@@ -26,7 +26,6 @@ namespace BankTellerExercise
             }
             return Balance;
             //return checkingBalance;
-
         }
 
 
