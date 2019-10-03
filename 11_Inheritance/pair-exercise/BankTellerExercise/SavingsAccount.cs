@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankTellerExercise
 {
-    class SavingsAccount : BankAccount
+    public class SavingsAccount : BankAccount
     {
         public decimal savingsBalance = 0;
 
@@ -12,18 +12,14 @@ namespace BankTellerExercise
         {
          if (Balance < 150.00M)
             {
-                savingsBalance = base.Withdraw(amountToWithdraw) - 2.00M;
+                 base.Withdraw(amountToWithdraw + 2.00M);/* - 2.00M;*/
                   
             }
-         else if (amountToWithdraw > Balance)
+         else if (amountToWithdraw <= Balance)
             {
-                savingsBalance = Balance;
+                base.Withdraw(amountToWithdraw);
             }
-         else
-            {
-                savingsBalance = base.Withdraw(amountToWithdraw);
-            }
-            return savingsBalance;
+            return base.Balance;
         }
 
     }

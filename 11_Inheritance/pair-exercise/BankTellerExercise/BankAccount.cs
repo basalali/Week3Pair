@@ -16,6 +16,7 @@ namespace BankTellerExercise
             get { return AccountNumber; }
             set { }
         }
+
         public decimal Balance { get; private set; } = 0;
         // balance begins at 0
 
