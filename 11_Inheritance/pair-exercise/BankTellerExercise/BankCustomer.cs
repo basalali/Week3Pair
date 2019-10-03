@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BankTellerExercise
 {
-    class BankCustomer : BankAccount
+    public class BankCustomer : BankAccount
     {
         public string Name { get; set; }
         public string Address { get; set; }
@@ -34,23 +34,24 @@ namespace BankTellerExercise
                     {
                         return true;
                     }
-         
                 }
                 return false;
             }
-
-
         }
+
         List<BankAccount> accountsList = new List<BankAccount>();
+        
 
         public void AddAccount(BankAccount newAccount)
         {
-            
+
             //made a new list of Bank Accounts called accountsList
             //we are making a List so that it can be added to, unlike an array
             //when an array is needed, the derived property Accounts will convert this list into an array!
 
             accountsList.Add(newAccount);
         }
+
+
     }
 }

@@ -6,7 +6,6 @@ namespace BankTellerExercise
 {
     public class SavingsAccount : BankAccount
     {
-        public decimal savingsBalance = 0;
 
         public override decimal Withdraw(decimal amountToWithdraw)
         {
