@@ -37,8 +37,5 @@ namespace BankTellerExercise
             destinationAccount.Balance = destinationAccount.Balance + transferAmount;
             Balance = Balance - transferAmount;
         }
-
-
-
     }
 }
