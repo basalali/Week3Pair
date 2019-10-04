@@ -52,11 +52,7 @@ namespace BankTellerExercise.Tests
 
             Assert.AreEqual(500, result);
 
-            
-
-
-
-
+           
 
         }
 
