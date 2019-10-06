@@ -19,12 +19,14 @@ namespace EmployeePayroll.CLasses
         public double CalculateWeeklyPay(int hoursWorked)
         {
             double pay = HourlyRate * hoursWorked;
+
+            if (hoursWorked > 40)
+            { 
             double overtime = hoursWorked - 40;
             pay = pay + (HourlyRate * overtime * .5);
+            }
+        
             return pay;
-
-            //camelCase for variables
-            //PascalCase for Properties?
         }
     }
 }
